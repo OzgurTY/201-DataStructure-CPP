@@ -14,6 +14,9 @@ private:
     Node* tail;
 public:
     LinkedList();
+    void insertFirst(Node* newNode);
+    void insertLast(Node* newNode);
+    void insertMiddle(Node* newNode, Node* previousNode);
 };
 
 
