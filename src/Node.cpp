@@ -13,8 +13,12 @@ void Node::setNext(Node* next) {
     this->next = next;
 }
 
-void Node::getNext(Node* next) {
+Node *Node::getNext() {
     return next;
+}
+
+int Node::getData() {
+    return data;
 }
 
 

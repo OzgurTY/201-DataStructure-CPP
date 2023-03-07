@@ -14,9 +14,13 @@ private:
     Node* tail;
 public:
     LinkedList();
+    ~LinkedList();
     void insertFirst(Node* newNode);
     void insertLast(Node* newNode);
     void insertMiddle(Node* newNode, Node* previousNode);
+    Node* search(int value);
+    Node* getValueAtIndex(int index);
+    int numberOfElements();
 };
 
 

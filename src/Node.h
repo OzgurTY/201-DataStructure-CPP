@@ -9,11 +9,12 @@
 class Node {
 private:
     int data;
-    Node* next;
+    Node *next;
 public:
     Node(int data);
     void setNext(Node* next);
-    void getNext(Node* next);
+    Node* getNext();
+    int getData();
 };
 
 
