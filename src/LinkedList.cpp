@@ -3,6 +3,7 @@
 //
 
 #include "LinkedList.h"
+using namespace std;
 
 LinkedList::LinkedList() {
     head = nullptr;
@@ -65,8 +66,59 @@ int LinkedList::numberOfElements() {
 }
 
 LinkedList::~LinkedList() {
+    Node *tmp = head;
+    Node *next;
+    while (tmp != nullptr) {
+        next = tmp->getNext();
+        delete tmp;
+        tmp = next;
+    }
 }
 
+string LinkedList::to_string() {
+    Node *tmp = head;
+    string result;
+    while (tmp != nullptr) {
+        result += tmp->to_string() + " ";
+        tmp = tmp->getNext();
+    }
+    return result;
+}
 
+void LinkedList::deleteFirst() {
+    Node* tmp = head;
+    head = head->getNext();
+    if (head == nullptr){
+        tail = nullptr;
+    }
+    delete tmp;
+}
+
+void LinkedList::deleteLast() {
+    Node *toBeDeleted = tail;
+    tail = getPrevious(tail);
+    if (tail != nullptr) {
+        tail->setNext(nullptr);
+    } else {
+        head = nullptr;
+    }
+    delete toBeDeleted;
+}
+
+Node *LinkedList::getPrevious(Node *node) {
+    Node *tmp = head;
+    Node *previous = nullptr;
+    while (tmp != tail) {
+        previous = tmp;
+        tmp = tmp->getNext();
+    }
+    return previous;
+}
+
+void LinkedList::deleteMiddle(Node *node) {
+    Node* previous;
+    previous = getPrevious(node);
+    previous->setNext(node->getNext());
+}
 
 

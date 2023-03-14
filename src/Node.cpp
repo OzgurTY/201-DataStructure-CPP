@@ -21,4 +21,8 @@ int Node::getData() {
     return data;
 }
 
+string Node::to_string() {
+    return ::to_string(data);
+}
+
 

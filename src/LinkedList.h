@@ -8,6 +8,8 @@
 
 #include "Node.h"
 
+using namespace std;
+
 class LinkedList {
 private:
     Node* head;
@@ -21,6 +23,11 @@ public:
     Node* search(int value);
     Node* getValueAtIndex(int index);
     int numberOfElements();
+    string to_string();
+    void deleteFirst();
+    void deleteLast();
+    Node* getPrevious(Node* node);
+    void deleteMiddle(Node* node);
 };
 
 
