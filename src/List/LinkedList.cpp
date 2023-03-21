@@ -42,7 +42,7 @@ Node *LinkedList::search(int value) {
     return nullptr;
 }
 
-Node *LinkedList::getValueAtIndex(int index) {
+Node *LinkedList::getNodeI(int index) {
     Node* tmp = head;
     int count = 0;
     while (tmp != nullptr) {
@@ -119,6 +119,10 @@ void LinkedList::deleteMiddle(Node *node) {
     Node* previous;
     previous = getPrevious(node);
     previous->setNext(node->getNext());
+}
+
+Node *LinkedList::getHead() {
+    return head;
 }
 
 

@@ -3,5 +3,5 @@ project(DataStructures_CPP)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(DataStructures_CPP src/Node.cpp src/Node.h src/LinkedList.cpp src/LinkedList.h Test/catch.hpp src/DoublyNode.cpp src/DoublyNode.h)
-add_executable(Test src/Node.cpp src/Node.h src/LinkedList.cpp src/LinkedList.h Test/LinkedListTest.cpp Test/LinkedListTest.cpp Test/catch.hpp src/DoublyNode.cpp src/DoublyNode.h)
+add_library(DataStructures_CPP src/List/Node.cpp src/List/Node.h src/List/LinkedList.cpp src/List/LinkedList.h Test/catch.hpp src/List/DoublyNode.cpp src/List/DoublyNode.h src/List/DoublyLinkedList.cpp src/List/DoublyLinkedList.h src/Array/Element.cpp src/Array/Element.h src/Array/Stack.cpp src/Array/Stack.h src/List/Stack.cpp src/List/Stack.h)
+add_executable(Test src/List/Node.cpp src/List/Node.h src/List/LinkedList.cpp src/List/LinkedList.h Test/LinkedListTest.cpp Test/LinkedListTest.cpp Test/catch.hpp src/List/DoublyNode.cpp src/List/DoublyNode.h src/List/DoublyLinkedList.cpp src/List/DoublyLinkedList.h src/Array/Element.cpp src/Array/Element.h src/Array/Stack.cpp src/Array/Stack.h src/List/Stack.cpp src/List/Stack.h)

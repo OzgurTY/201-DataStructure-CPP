@@ -11,7 +11,7 @@
 using namespace std;
 
 class LinkedList {
-private:
+protected:
     Node* head;
     Node* tail;
 public:
@@ -19,15 +19,18 @@ public:
     ~LinkedList();
     void insertFirst(Node* newNode);
     void insertLast(Node* newNode);
-    void insertMiddle(Node* newNode, Node* previousNode);
+    void insertMiddle(Node* newNode, Node* previous);
     Node* search(int value);
-    Node* getValueAtIndex(int index);
+    Node* getNodeI(int i);
+    Node* getHead();
     int numberOfElements();
-    string to_string();
-    void deleteFirst();
-    void deleteLast();
+
+    virtual void deleteFirst();
     Node* getPrevious(Node* node);
+
+    virtual void deleteLast();
     void deleteMiddle(Node* node);
+    string to_string();
 };
 
 
